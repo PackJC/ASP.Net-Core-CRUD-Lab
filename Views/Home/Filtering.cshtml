@@ -1,0 +1,39 @@
+﻿@model IEnumerable<LabW06StudentGrades.Models.Entities.Student>
+
+@{
+    ViewData["Title"] = "Filtering";
+}
+
+<h1>@ViewData["Message"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ENumber
+            </th>
+            <th>
+                FirstName
+            </th>
+            <th>
+                LastName
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.ENumber
+                </td>
+                <td>
+                    @item.FirstName
+                </td>
+                <td>
+                    @item.LastName
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
